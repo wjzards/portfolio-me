@@ -59,8 +59,8 @@ class Navbar extends React.Component {
             <OnShow>
               <div>
                 <h1>Menu</h1>
-                <Link to="/">Home</Link>
-                <Link to="/about">About Me</Link>            
+                <Link to={`${process.env.PUBLIC_URL}/`} >Home</Link>
+                <Link to={`${process.env.PUBLIC_URL}/about`} >About Me</Link>            
               </div>
           </OnShow>}
         </ThemeProvider>
