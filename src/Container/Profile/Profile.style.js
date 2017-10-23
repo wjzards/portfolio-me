@@ -19,6 +19,9 @@ export const ProfileLayout = styled.div`
     left: 0;
     background: ${Colors.bgBlack};
   }
+  @media only screen and (max-width: 425px){
+    padding-top: 30px;
+  }
 `;
 
 export const Email = styled.div`
@@ -61,6 +64,9 @@ export const Email = styled.div`
   @media only screen and (max-width: 1024px){
     bottom: 30px;
     left: 30px;
+  } 
+  @media only screen and (max-width: 425px){
+    visibility: hidden;      
   }
   /* ---------------------screen display--------------------- */ 
 `;
@@ -70,6 +76,12 @@ export const ProfileContent = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   position: relative;
+  /* ---------------------screen display--------------------- */   
+  @media only screen and (max-width: 425px){
+    grid-template-columns: 1fr;
+    grid-row-gap: 10px;
+  }
+  /* ---------------------screen display--------------------- */ 
 `;
 
 export const ImageBox = styled.div`
@@ -102,6 +114,19 @@ export const ImageBox = styled.div`
       border:13px solid rgba(255, 255, 0, 0.8);
     }
   }
+  @media only screen and (max-width: 768px){
+    &:after{
+      width: 105px; 
+      height: 160px;
+      top: -0px;
+      left: 140px;
+    }
+  }
+  @media only screen and (max-width: 425px){
+    &:after{
+      display: none; 
+    }
+  }
   /* ---------------------screen display--------------------- */ 
 `;
 
@@ -118,10 +143,20 @@ export const Image = styled.div`
     width: 370px;
     height: 450px;
   }
-
   @media only screen and (max-width: 1024px){
     width: 250px;
     height: 350px;
+  }
+  @media only screen and (max-width: 768px){
+    background-position-x: -120px;
+    width: 200px;
+    height: 300px;
+  }
+  @media only screen and (max-width: 425px){
+    background-position-x: -120px;
+    width: 180px;
+    height: 280px;
+    box-shadow: 0px 0px 50px 0px #212121;
   }
   /* ---------------------screen display--------------------- */ 
 `;
@@ -176,7 +211,6 @@ export const TextBox = styled.div`
       font-size: 3.8rem;
     }
   }
-
   @media only screen and (max-width: 1024px){
     padding-left: 5px;
     h1{
@@ -184,6 +218,36 @@ export const TextBox = styled.div`
     }
     h2{
       font-size: 3rem;
+    }
+  }
+  @media only screen and (max-width: 768px){
+    padding-left: 0px;
+    h1{
+      font-size: 4.5rem;
+    }
+    h2{
+      font-size: 2.5rem;
+    }
+  }
+  @media only screen and (max-width: 425px){
+    padding-bottom: 20px;
+    text-align: center;
+    h1{
+      font-size: 2.5rem;
+      span{
+        color: ${Colors.bgBlack};
+        margin-left: 0px;
+      }
+    }
+    h2{
+      font-size: 1.5rem;
+      background: ${Colors.yellow};
+      padding: 5px;
+      &:nth-child(4){
+      }
+      &:after{
+        display: none;        
+      }
     }
   }
   /* ---------------------screen display--------------------- */ 

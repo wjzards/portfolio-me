@@ -3,7 +3,7 @@ import Colors from "../../Theme/Colors";
 
 export const NavbarLayout = styled.div`
   position: fixed;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
 `;
 
@@ -23,6 +23,10 @@ export const Logo = styled.img`
     left: 30px;
     width: 50px;
     height: 30px;
+  }
+  @media only screen and (max-width: 425px){
+    width: 45px;
+    height: 25px;
   }
   /* ---------------------screen display--------------------- */ 
 `;
@@ -47,6 +51,13 @@ export const Menu = styled.div`
     h2{
       font-size: 18px;
       padding-right: 20px;
+    }
+  }
+  @media only screen and (max-width: 768px){
+    top: 15px;
+    right: 30px; 
+    h2{
+      visibility: hidden;
     }
   }
   /* ---------------------screen display--------------------- */ 
@@ -117,6 +128,7 @@ export const Icon = styled.div`
 export const OnShow = styled.div`
   z-index: 3;
   position: absolute;
+  overflow: hidden;
   top:0;
   display: flex;
   justify-content: center;
@@ -176,13 +188,15 @@ export const OnShow = styled.div`
     }
   }
   /* ---------------------screen display--------------------- */
-  @media only screen and (max-width: 1366px){
+  @media only screen and (max-width: 425px){
     div{
-      
+      h1{
+        font-size: 2.5rem;
+      }
+      a{
+        font-size: 1.7rem;
+      }
     }
-  }
-  @media only screen and (max-width: 1024px){
-
   }
   /* ---------------------screen display--------------------- */ 
 `;
@@ -196,6 +210,10 @@ export const Follow = styled.div`
   @media only screen and (max-width: 1024px){
     bottom: 30px;
     right: 30px;
+  }
+  @media only screen and (max-width: 425px){
+    bottom: 15%;
+    right: 20px;
   }
   /* ---------------------screen display--------------------- */
 `;
@@ -245,6 +263,7 @@ export const IconFollow = styled.div`
       width: 120px;
     }
   }
+  /* ---------------------screen display--------------------- */ 
   @media only screen and (max-width: 1024px){
     a{
       font-size: 20px;
@@ -252,12 +271,22 @@ export const IconFollow = styled.div`
         margin-bottom: 70px;
       }
     }
-  
     h2{
       transform: translate(-30px, -30px) rotate(-90deg);
       font-size: 18px;
       text-align: center;
       width: 100px;
+    }
+  }
+  @media only screen and (max-width: 425px){
+    a{
+      font-size: 18px;
+      &:nth-child(4){
+        margin-bottom: 70px;
+      }
+    }
+    h2{
+      display: none;
     }
   }
   /* ---------------------screen display--------------------- */ 

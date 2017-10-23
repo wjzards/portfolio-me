@@ -13,6 +13,9 @@ export const PortfolioLayout = styled.div`
   @media only screen and (max-width: 1024px){
     padding: 20px 0px;
   }
+  @media only screen and (max-width: 425px){
+    padding: 50px 0px;
+  }
   /* ---------------------screen display--------------------- */ 
 `;
 
@@ -30,6 +33,13 @@ export const PorfolioContent = styled.div`
     height: 15px;
     background: ${Colors.yellow};
   }
+  /* ---------------------screen display--------------------- */
+  @media only screen and (max-width: 768px){
+    &:after{
+      height: 10px;
+    }
+  }
+  /* ---------------------screen display--------------------- */
 `;
 
 export const Menu = styled.div`
@@ -64,6 +74,29 @@ export const Menu = styled.div`
       }
     }
   }
+  /* ---------------------screen display--------------------- */
+  @media only screen and (max-width: 768px){
+    h2{
+      font-size: 20px;
+    }
+  }
+  @media only screen and (max-width: 425px){
+    display: flex;
+    justify-content: center;
+    right: none;
+    left: 0;
+    width: 100%;
+    h2{
+      font-size: 20px;
+    }
+  }
+  @media only screen and (max-width: 320px){
+    bottom: 0px;
+    h2{
+      font-size: 16px;
+    }
+  }
+  /* ---------------------screen display--------------------- */
 `;
 
 export const Title = styled.h1`
@@ -77,6 +110,15 @@ export const Title = styled.h1`
   @media only screen and (max-width: 1024px){
     font-size: 4rem;
     line-height: 1.3;
+  }
+  @media only screen and (max-width: 768px){
+    font-size: 3.5rem;
+    line-height: 1.3;
+  }
+  @media only screen and (max-width: 768px){
+    font-size: 3.5rem;
+    text-align: center;
+    line-height: 3;
   }
   /* ---------------------screen display--------------------- */ 
 `;
@@ -98,5 +140,9 @@ export const Product = styled.div`
       margin-bottom: 10%;
     }
   }
-
+  /* ---------------------screen display--------------------- */
+  @media only screen and (max-width: 768px){
+    grid-template-columns: 1fr;
+  }
+  /* ---------------------screen display--------------------- */
 `;
